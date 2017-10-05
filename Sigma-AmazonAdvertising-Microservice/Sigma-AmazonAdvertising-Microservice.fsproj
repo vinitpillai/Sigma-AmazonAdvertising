@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>da7d33e2-8038-438c-b288-8a78ed68a07c</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Sigma_AmazonAdvertising_Microservice</RootNamespace>
+    <AssemblyName>Sigma_AmazonAdvertising_Microservice</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
+    <Name>Sigma-AmazonAdvertising-Microservice</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <Tailcalls>false</Tailcalls>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\Debug\Sigma_AmazonAdvertising_Microservice.XML</DocumentationFile>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <Tailcalls>true</Tailcalls>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\Release\Sigma_AmazonAdvertising_Microservice.XML</DocumentationFile>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="API_Engine_Microservices_Core">
+      <HintPath>..\..\lib\API_Engine_Microservices_Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microservice-Core-Protocol">
+      <HintPath>..\..\lib\Microservice-Core-Protocol.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\lib\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\..\lib\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ_Interface">
+      <HintPath>..\..\lib\RabbitMQ_Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="RiakClient">
+      <HintPath>..\..\lib\RiakClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Sigma-Lib-Hashing">
+      <HintPath>..\..\lib\Sigma-Lib-Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="Sigma-Lib-Lists">
+      <HintPath>..\..\lib\Sigma-Lib-Lists.dll</HintPath>
+    </Reference>
+    <Reference Include="Sigma-Lib-Riak">
+      <HintPath>..\..\lib\Sigma-Lib-Riak.dll</HintPath>
+    </Reference>
+    <Reference Include="Sigma-Lib-Union">
+      <HintPath>..\..\lib\Sigma-Lib-Union.dll</HintPath>
+    </Reference>
+    <Reference Include="Sigma-Lib-Web">
+      <HintPath>..\..\lib\Sigma-Lib-Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Sigma-Types-API-Microservices">
+      <HintPath>..\..\lib\Sigma-Types-API-Microservices.dll</HintPath>
+    </Reference>
+    <Reference Include="Sigma-Types-DataDog">
+      <HintPath>..\..\lib\Sigma-Types-DataDog.dll</HintPath>
+    </Reference>
+    <Reference Include="Sigma-Types-Job">
+      <HintPath>..\..\lib\Sigma-Types-Job.dll</HintPath>
+    </Reference>
+    <Reference Include="Sigma-Types-Protocol">
+      <HintPath>..\..\lib\Sigma-Types-Protocol.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="Service.fs" />
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sigma-AmazonAdvertising-Connector\Sigma-AmazonAdvertising-Connector.fsproj">
+      <Name>Sigma-AmazonAdvertising-Connector</Name>
+      <Project>{10bc16b5-6007-4579-bfd4-382b16bf8e0e}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma-Types-AmazonAdvertising\Sigma-Types-AmazonAdvertising.fsproj">
+      <Name>Sigma-Types-AmazonAdvertising</Name>
+      <Project>{d2cb8ac2-7753-4634-87c6-ba965fa7b595}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '11.0'">
+      <PropertyGroup Condition="Exists('$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets')">
+        <FSharpTargetsPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets</FSharpTargetsPath>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.FSharp.Targets')">
+        <FSharpTargetsPath>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.FSharp.Targets</FSharpTargetsPath>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  <Import Project="$(FSharpTargetsPath)" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

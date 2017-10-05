@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sigma-AmazonAdvertising-Connector", "Sigma-AmazonAdvertising-Connector\Sigma-AmazonAdvertising-Connector.fsproj", "{10BC16B5-6007-4579-BFD4-382B16BF8E0E}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sigma-AmazonAdvertising-Microservice", "Sigma-AmazonAdvertising-Microservice\Sigma-AmazonAdvertising-Microservice.fsproj", "{DA7D33E2-8038-438C-B288-8A78ED68A07C}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sigma-AmazonAdvertising-Interface", "Sigma-AmazonAdvertising-Interface\Sigma-AmazonAdvertising-Interface.fsproj", "{F67E810F-C5FA-4E99-91BF-9CE8DF16DEDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{A1577052-BFC4-48FF-BC38-283621CD23D8}"
+	ProjectSection(SolutionItems) = preProject
+		..\lib\API-Microservices-Interface.dll = ..\lib\API-Microservices-Interface.dll
+		..\lib\API_Engine_Microservices_Core.dll = ..\lib\API_Engine_Microservices_Core.dll
+		..\lib\FSharp.Core.dll = ..\lib\FSharp.Core.dll
+		..\lib\Microservice-Core-Protocol-Client.dll = ..\lib\Microservice-Core-Protocol-Client.dll
+		..\lib\Microservice-Core-Protocol.dll = ..\lib\Microservice-Core-Protocol.dll
+		..\lib\Newtonsoft.Json.dll = ..\lib\Newtonsoft.Json.dll
+		..\lib\protobuf-net.dll = ..\lib\protobuf-net.dll
+		..\lib\RabbitMQ.Client.dll = ..\lib\RabbitMQ.Client.dll
+		..\lib\RabbitMQ_Interface.dll = ..\lib\RabbitMQ_Interface.dll
+		..\lib\RiakClient.dll = ..\lib\RiakClient.dll
+		..\lib\Sigma-Brandwatch-Connector.dll = ..\lib\Sigma-Brandwatch-Connector.dll
+		..\lib\Sigma-Lib-Hashing.dll = ..\lib\Sigma-Lib-Hashing.dll
+		..\lib\Sigma-Lib-Lists.dll = ..\lib\Sigma-Lib-Lists.dll
+		..\lib\Sigma-Lib-Numerics.dll = ..\lib\Sigma-Lib-Numerics.dll
+		..\lib\Sigma-Lib-Riak.dll = ..\lib\Sigma-Lib-Riak.dll
+		..\lib\Sigma-Lib-Union.dll = ..\lib\Sigma-Lib-Union.dll
+		..\lib\Sigma-Lib-Web.dll = ..\lib\Sigma-Lib-Web.dll
+		..\lib\Sigma-Types-API-Microservices.dll = ..\lib\Sigma-Types-API-Microservices.dll
+		..\lib\Sigma-Types-Brandwatch.dll = ..\lib\Sigma-Types-Brandwatch.dll
+		..\lib\Sigma-Types-DataDog.dll = ..\lib\Sigma-Types-DataDog.dll
+		..\lib\Sigma-Types-Designer.dll = ..\lib\Sigma-Types-Designer.dll
+		..\lib\Sigma-Types-Job.dll = ..\lib\Sigma-Types-Job.dll
+		..\lib\Sigma-Types-Protocol.dll = ..\lib\Sigma-Types-Protocol.dll
+		..\lib\StatsdClient.dll = ..\lib\StatsdClient.dll
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sigma-Types-AmazonAdvertising", "Sigma-Types-AmazonAdvertising\Sigma-Types-AmazonAdvertising.fsproj", "{D2CB8AC2-7753-4634-87C6-BA965FA7B595}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10BC16B5-6007-4579-BFD4-382B16BF8E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10BC16B5-6007-4579-BFD4-382B16BF8E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10BC16B5-6007-4579-BFD4-382B16BF8E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10BC16B5-6007-4579-BFD4-382B16BF8E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA7D33E2-8038-438C-B288-8A78ED68A07C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7D33E2-8038-438C-B288-8A78ED68A07C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7D33E2-8038-438C-B288-8A78ED68A07C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7D33E2-8038-438C-B288-8A78ED68A07C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F67E810F-C5FA-4E99-91BF-9CE8DF16DEDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F67E810F-C5FA-4E99-91BF-9CE8DF16DEDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F67E810F-C5FA-4E99-91BF-9CE8DF16DEDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F67E810F-C5FA-4E99-91BF-9CE8DF16DEDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2CB8AC2-7753-4634-87C6-BA965FA7B595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2CB8AC2-7753-4634-87C6-BA965FA7B595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2CB8AC2-7753-4634-87C6-BA965FA7B595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2CB8AC2-7753-4634-87C6-BA965FA7B595}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
