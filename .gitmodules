@@ -1,0 +1,3 @@
+[submodule "Sigma-Lib-Web"]
+	path = Sigma-Lib-Web
+	url = git@github.com:360iLondon/Sigma-Lib-Web.git
